@@ -1,38 +1,278 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: flex-end;
+  gap: 30px;
+  background-color: gray;
+  height: 100px;
+  align-content: center;
+
+}
+.nav-1{
+  color:white;
+  margin-top: 30px;
+  display: flex;
+  font-size: 20px;
+  text-decoration: none;
+  transition: ease-in-out;
+  font-family: 'Changa', sans-serif;
+
+}
+.nav-1:hover{
+  transform: scale(1.1);
+  color:yellowgreen;
+}
+
+
+.nav-2{
   color: white;
+  margin-top: 30px;
+  display: flex;
+  font-size: 20px;
+  text-decoration: none;
+  transition: ease-in-out;
+  font-family: 'Changa', sans-serif;
+
+}
+.nav-2:hover{
+  transform: scale(1.1);
+  color:yellowgreen;
+}
+.home-page{
+  display: flex;
+  gap: 200px;
+}
+.img-container{
+  margin-left: 100px;
+  align-items: center;
+  justify-content:center;
+}
+.john{
+  margin-top: 30px;
+  display: flex;
+  border-radius: 90px;
+  cursor: pointer;
+  transition: ease-in-out;
+  
+}
+.john:hover{
+  transform: scale(1.2);
+}
+.bio{
+  width: 350px;
+}
+h3{
+display: flex;
+margin-top: 40px;
+color:olive;
+font-family: 'Changa', sans-serif;
+
+}
+p{
+  font-family: 'Changa', sans-serif;
+}
+.line-1{
+  margin-top: 100px;
+  height: 1px;
+  background: black;
+}
+.skill-set{
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 40px;
 }
 
-.App-link {
-  color: #61dafb;
+
+h4{
+color:olive;
+font-family: 'Changa', sans-serif;
+font-size: 40px;
+}
+.icons{
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 90px;
+  margin-bottom: 150px;
+  cursor: pointer;
+  
+}
+.icons>img{
+  transition:ease-in-out;
+
+}
+.icons>img:hover{
+  transform: scale(0.9);
+}
+@media only screen and (max-width:991px){
+  .home-page{
+    display: grid;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .john{
+    width:200px;
+  }
+  .bio{
+    margin-top: 10px;
+  }
+  .icons{
+    display: grid;
+    
+  }
+  .icons>img{
+    width:90px;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.contact{
+  display: flex;
+  height: 350px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-left: 100px;
+  gap: 360px;
+  
+}
+background-image{
+  width: 400px;
+  height: 600px;
+}
+.p-1{
+  font-family: 'Poppins', sans-serif;
+  color: olive;
+  font-size: 50px;
+  font-weight: 100px;
+  margin-top: 50px;
+}
+.my-form{
+  display: grid;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 100px;
+  
+}
+
+input[name=firstname]{
+  padding: 10px;
+  border-radius: 7px;
+  margin-left: 50px;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+
+}
+input[name=firstname]:focus{
+  background-color: beige;
+}
+input[name=email]{
+  padding: 10px;
+  border-radius: 7px;
+  margin-left: 50px;
+  margin-top: 10px;
+  font-family: 'Poppins', sans-serif;
+  
+}
+input[name=email]:focus{
+  background-color: beige;
+}
+textarea{
+  width:350px;
+  height:100px;
+  padding: 34px;
+  border-radius: 7px;
+  font-family: 'Poppins', sans-serif;
+
+}
+textarea:focus{
+  background-color: beige;
+  
+}
+.submit{
+  font-family: 'Poppins', sans-serif;
+  margin-left: 100px;
+  background-color:rgb(100, 101, 119);
+  color: white;
+  border-radius: 5px;
+  transition: ease-in-out;
+}
+.submit:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.errors{
+  font-family: 'Poppins', sans-serif;
+  display: grid;
+  justify-content: center;
+  font-size: 10px;
+  color:red;
+  font-weight: 300;
+}
+h6{
+  font-family: 'Poppins', sans-serif; 
+  color:olive;
+  cursor: default;
+}
+.socials{
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 100px;
+  cursor: pointer;
+  gap:2rem;
+}
+.github-icon{
+  border-radius: 7px;
+  transition: ease-in-out;
+  margin-bottom: 100px;
+}
+.github-icon:hover{
+  transform: scale(1.1);
+}
+.twitter-icon{
+  border-radius: 7px;
+  transition: ease-in-out;
+  margin-bottom: 100px;
+}
+.twitter-icon:hover{
+  transform: scale(1.1);
+}
+.instagram-icon{
+  border-radius: 7px;
+  transition: ease-in-out;
+  margin-bottom: 100px;
+
+}
+.instagram-icon:hover{
+  transform: scale(1.1);
+}
+@media only screen and (max-width:990px){
+  .contact{ 
+    display: grid;
+    justify-content: center;
+    gap:10rem;
   }
-  to {
-    transform: rotate(360deg);
+  .socials{
+    display: flex;
+    justify-content: flex-end;
+    gap:1rem;
+    margin-bottom: 100px;
+    
+    
   }
+  .socials>img{
+    width:40px;
+    border-radius: 7px;
+    transition: ease-in-out;
+  }
+  .socials>img:hover{
+transform: scale(1.2);
+  }
+  
 }
