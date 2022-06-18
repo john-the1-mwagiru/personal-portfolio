@@ -9,6 +9,7 @@
 .navbar{
   display: flex;
   justify-content: flex-end;
+  
   gap: 30px;
   background-color: gray;
   height: 100px;
@@ -39,6 +40,7 @@
   text-decoration: none;
   transition: ease-in-out;
   font-family: 'Changa', sans-serif;
+  margin-right: 50px;
 
 }
 .nav-2:hover{
@@ -48,6 +50,7 @@
 .home-page{
   display: flex;
   gap: 200px;
+  margin-left: 60px;
 }
 .img-container{
   margin-left: 100px;
@@ -58,13 +61,10 @@
   margin-top: 30px;
   display: flex;
   border-radius: 90px;
-  cursor: pointer;
-  transition: ease-in-out;
+  
   
 }
-.john:hover{
-  transform: scale(1.2);
-}
+
 .bio{
   width: 350px;
 }
@@ -83,6 +83,57 @@ p{
   height: 1px;
   background: black;
 }
+span{
+display: flex;
+margin-top: 40px;
+margin-bottom: 40px;
+color:olive;
+font-family: 'Changa', sans-serif;
+justify-content: center;
+font-size: 30px;
+
+}
+.cards-div{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  
+}
+.project-card{
+  display: flex;
+  width:300px;
+  height: 420px;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  border:1px solid black;
+  gap: 15px;
+  box-shadow: 5px 5px 20px gray;
+}
+.expense-tracker{
+margin-top: 10px;
+margin-left: 15px;
+height: 180px;
+width:270px;
+
+
+}
+.the-app{
+  font-family: 'Changa', sans-serif;
+  font-weight: bolder;
+}
+.git-link{
+  font-family: 'Changa', sans-serif;
+  font-weight: bolder;
+}
+.short-bio{
+  margin-left: 10px;
+}
+.live-feed{
+  font-family: 'Changa', sans-serif;
+  font-weight: bolder;
+  color: purple;
+}
 .skill-set{
   display: flex;
   justify-content: center;
@@ -92,6 +143,7 @@ p{
 
 
 h4{
+display: flex;
 color:olive;
 font-family: 'Changa', sans-serif;
 font-size: 40px;
@@ -102,49 +154,37 @@ font-size: 40px;
   justify-content: center;
   gap: 90px;
   margin-bottom: 150px;
-  cursor: pointer;
+  
   
 }
 .icons>img{
+  display: flex;
   transition:ease-in-out;
 
 }
-.icons>img:hover{
-  transform: scale(0.9);
-}
-@media only screen and (max-width:991px){
+/* Media query*/
+@media only screen and (max-width:1000px){
   .home-page{
-    display: grid;
-    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
   }
-  .john{
-    width:200px;
-  }
-  .bio{
-    margin-top: 10px;
-  }
   .icons{
-    display: grid;
-    
+  
+    display: flex;
+    flex-wrap: wrap;
   }
-  .icons>img{
-    width:90px;
-  }
+
 }
+/*......media query*/
 
 .contact{
   display: flex;
-  height: 350px;
-  margin-top: 100px;
-  margin-bottom: 100px;
-  margin-left: 100px;
-  gap: 360px;
-  
+  gap:300px;
 }
-background-image{
-  width: 400px;
-  height: 600px;
+.socials{
+  display: flex;
+  
 }
 .p-1{
   font-family: 'Poppins', sans-serif;
@@ -152,14 +192,19 @@ background-image{
   font-size: 50px;
   font-weight: 100px;
   margin-top: 50px;
+  margin-left: 90px;
+  display: flex;
+  
+}
+.inputs{
+  margin-left: 20px;
 }
 .my-form{
   display: grid;
-  justify-content: center;
   gap: 30px;
+  margin-top: 50px;
   margin-bottom: 100px;
-  
-}
+  }
 
 input[name=firstname]{
   padding: 10px;
@@ -197,7 +242,7 @@ textarea:focus{
 }
 .submit{
   font-family: 'Poppins', sans-serif;
-  margin-left: 100px;
+  margin-left: 60px;
   background-color:rgb(100, 101, 119);
   color: white;
   border-radius: 5px;
@@ -252,27 +297,57 @@ h6{
 .instagram-icon:hover{
   transform: scale(1.1);
 }
-@media only screen and (max-width:990px){
-  .contact{ 
-    display: grid;
-    justify-content: center;
-    gap:10rem;
-  }
-  .socials{
-    display: flex;
-    justify-content: flex-end;
-    gap:1rem;
-    margin-bottom: 100px;
-    
+
+@media screen and (max-width: 480px){
+  .contact{
+    padding: 0;
+    flex-direction: column;
+    gap: 1rem;
+    height: 40rem;
     
   }
-  .socials>img{
-    width:40px;
-    border-radius: 7px;
-    transition: ease-in-out;
+  .p-1{
+    margin-right:6px;
   }
-  .socials>img:hover{
-transform: scale(1.2);
+  input[name=firstname]{
+    margin-left: 12px;
+    width: 60%;
+    
+  }
+  input[name=email]{
+    margin-left: 12px;
+    width: fit-content;
+  }
+  textarea{
+    width:fit-content;
+    margin-left: 2px;
+
   }
   
+  .submit{
+    width: 60%;
+    margin-left: 20px;
+    
+  }
 }
+/* Media Query*/
+@media screen and (max-width: 927px){
+  .contact{
+    padding: 0;
+    flex-direction: column;
+    gap: 5rem;
+    height: 40rem;
+  }
+  .p-1{
+    justify-content: center;
+  }
+  .my-form{
+    margin-left: 70px;
+    flex-direction: column;
+    justify-content: center;
+  }
+  }
+
+  
+  
+ 
